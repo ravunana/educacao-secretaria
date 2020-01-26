@@ -1,0 +1,72 @@
+{
+    "name": "Ocorrencia",
+    "fields": [
+        {
+            "fieldName": "tipoOcorrencia",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "data",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "numero",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "unique",
+                "required"
+            ]
+        },
+        {
+            "fieldName": "reportarEncarregado",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "de",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "ate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "aluno",
+            "otherEntityRelationshipName": "ocorrencia",
+            "relationshipValidateRules": "required",
+            "relationshipName": "matricula",
+            "otherEntityField": "numeroProcesso"
+        }
+    ],
+    "changelogDate": "20200126141952",
+    "entityTableName": "sec_ocorrencia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "secretaria",
+    "applications": "*",
+    "microserviceName": "secretaria",
+    "searchEngine": "elasticsearch"
+}

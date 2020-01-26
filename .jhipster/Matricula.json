@@ -1,0 +1,146 @@
+{
+    "name": "Matricula",
+    "fields": [
+        {
+            "fieldName": "data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "numeroChamada",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min",
+                "required"
+            ],
+            "fieldValidateRulesMin": 1
+        },
+        {
+            "fieldName": "anoLectivo",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "fotografia",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "certificado",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "documentoIdentificacao",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "resenciamentoMilitar",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "documentoSaude",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "fichaTransferencia",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "historicoEscolar",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "observacao",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "confirmacao",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "periodoLectivo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "turma",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "curso",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "turno",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "sala",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "classe",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "aluno",
+            "otherEntityRelationshipName": "matricula",
+            "relationshipValidateRules": "required",
+            "relationshipName": "aluno",
+            "otherEntityField": "numeroProcesso"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "categoriaAluno",
+            "otherEntityRelationshipName": "matricula",
+            "relationshipValidateRules": "required",
+            "relationshipName": "categoria",
+            "otherEntityField": "nome"
+        }
+    ],
+    "changelogDate": "20200126141955",
+    "entityTableName": "sec_matricula",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "secretaria",
+    "applications": "*",
+    "microserviceName": "secretaria",
+    "searchEngine": "elasticsearch"
+}
