@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.ravunana.educacao.secretaria",
+      "nativeLanguage": "pt-pt"
+    },
+    "jhipsterVersion": "6.6.0",
+    "applicationType": "microservice",
+    "baseName": "secretaria",
+    "packageName": "com.ravunana.educacao.secretaria",
+    "packageFolder": "com/ravunana/educacao/secretaria",
+    "serverPort": "8082",
+    "authenticationType": "uaa",
+    "uaaBaseName": "uaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTk1MzViMTJkZjE1YzdiODk3YjVmMDM5NmRhZWVjNjZiMjkzMjkxOTEzNjQ0MjE0Yjg5ZGQ0MDVkNDk0NzU0NTk1ZTYzMDNjODIwNTE3YzcxMjdlMjAxYTg0ODYzYjllOWFiYzY3ZTY2NmZhYTcxYjQ2NmM5MDExNGQ4NThkNjA=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1580047649934,
+    "testFrameworks": ["gatling", "cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "pt-pt",
+    "languages": ["pt-pt"],
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
